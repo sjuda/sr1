@@ -8,15 +8,28 @@ int main()
     int b;
     int c;
     int n;
+    int sum = 100;
     std::cout << "Enter value" << std::endl;
     std::cin >> n;
     if ((n <= 999) && (n >= 1))
     {
-        int sum = a * 100 + b * 10 + c;
+        for (a = 0; sum > 99; a++)
+        {
+            sum -= 100;
+        }
+        for (b = 0; sum > 9; b++)
+        {
+            sum -= 10;
+        }
+        for (c = 0; sum > 0; a++)
+        {
+            sum -= 1;
+        }
         int res;
         do
         {
             res = b * c + a;
+            sum++;
         } while (res != n);
         std::cout << "Answer is " << res;
     }
